@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shop_app/global_variables.dart';
 import 'package:shop_app/product_card.dart';
 
@@ -38,19 +37,16 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             // Header of shop app
-            const Row(
+            Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Text(
                     'Shoes\nCollection',
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                     child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),

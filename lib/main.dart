@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/home_page.dart';
-import 'package:shop_app/product_details_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,10 +30,24 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 16,
           ),
+          titleLarge: TextStyle(
+            fontSize: 35,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+          ),
+          centerTitle: true,
         ),
       ),
       title: 'Shop App',
-      home: const ProductDetailsPage(),
+      // home: ProductDetailsPage(
+      //   product: products[0],
+      // ),
+      home: const HomePage(),
     );
   }
 }
