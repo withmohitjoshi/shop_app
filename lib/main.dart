@@ -44,9 +44,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
       title: 'Shop App',
-      // home: ProductDetailsPage(
-      //   product: products[0],
-      // ),
       home: const HomePage(),
     );
   }
