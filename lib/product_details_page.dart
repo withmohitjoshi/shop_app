@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/cart_provider.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   final Map<String, Object> product;
@@ -87,7 +89,31 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       Icons.shopping_cart,
                       color: Colors.black,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      if (selectedSize != 0) {
+                        final product = widget.product;
+                        Provider.of<CartProvider>(context, listen: false)
+                            .addProduct({
+                          'id': product['id']!,
+                          'title': product['title']!,
+                          'price': product['price']!,
+                          'imageUrl': product['imageUrl']!,
+                          'company': product['company']!,
+                          'size': selectedSize,
+                        });
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Product added successfully!!!"),
+                          ),
+                        );
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Please select a size!!!"),
+                          ),
+                        );
+                      }
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Theme.of(context).colorScheme.primary,
                       minimumSize: const Size(double.infinity, 50),

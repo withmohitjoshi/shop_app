@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/cart_provider.dart';
-import 'package:shop_app/global_variables.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final cartItemsList = Provider.of<CartProvider>(context).cart;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cart'),
       ),
       body: ListView.builder(
-        itemCount: cart.length,
+        itemCount: cartItemsList.length,
         itemBuilder: (context, index) {
-          final cartItem = cart[index];
+          final cartItem = cartItemsList[index];
           return ListTile(
             leading: CircleAvatar(
               radius: 30,
