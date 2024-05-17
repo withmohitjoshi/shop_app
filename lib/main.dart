@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         title: 'Shop App',
-        home: Provider(create: (context) => 'HELLO!', child: const HomePage()),
+        home: const HomePage(),
       ),
     );
   }
