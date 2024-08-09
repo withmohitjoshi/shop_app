@@ -13,7 +13,7 @@ A simple shop app built with Flutter to showcase basic UI building knowledge and
 Clone the repository
 
 ```
-git clone https://your-github-username/flutter_shop_app.git
+git clone https://github.com/withmohitjoshi/shop_app.git
 ```
 
 Navigate to the directory
