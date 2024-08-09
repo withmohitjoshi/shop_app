@@ -1,16 +1,41 @@
-# shop_app
+# Shoes Shop App
 
-A new Flutter project.
+A simple shop app built with Flutter to showcase basic UI building knowledge and using Provider for state management.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Search for products by brand
+- Filter products by brand (Adidas, Nike)
+- Display product list with images and prices
 
-A few resources to get you started if this is your first Flutter project:
+## Running the app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Clone the repository
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+git clone https://your-github-username/flutter_shop_app.git
+```
+
+Navigate to the directory
+
+```
+cd ./shop_app
+```
+
+Install required packages
+
+```
+flutter pub get
+```
+
+Run the app
+
+```
+flutter run
+```
+
+## Snapshots
+
+<img src="./snapshots/snap_1.jpg" width="30%"/>
+<img src="./snapshots/snap_2.jpg" width="30%"/>
+<img src="./snapshots/snap_3.jpg" width="30%"/>
